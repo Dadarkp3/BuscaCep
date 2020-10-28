@@ -21,7 +21,7 @@ cep.onchange = () => {
 
 clean();
 
-function buscarCep() {
+function searchCep() {
   var cepInput = cep.value.replace(' - ', '');
   if (cepInput.length === 8) {
     var loader = `<img src="./src/assets/img/loader.svg" alt="loader" />`;
@@ -31,12 +31,12 @@ function buscarCep() {
     dataDiv.innerHTML = '';
     document.getElementById('loader').innerHTML = loader;
     setTimeout(function () {
-      requisicaoCep(cepInput);
+      fetchCep(cepInput);
     }, 2000);
   }
 }
 
-function requisicaoCep(cep) {
+function fetchCep(cep) {
   fetch(`https://viacep.com.br/ws/${cep}/json/`)
     .then((response) => response.json())
     .then((data) => {
