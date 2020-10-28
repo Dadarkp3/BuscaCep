@@ -10,10 +10,14 @@ body {
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 main {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
   max-width: 800px !important;
 }
 
@@ -151,4 +155,14 @@ hr {
   display: flex;
   flex-flow: row;
   justify-content: center;
+}
+
+footer {
+  color: white;
+  font-size: 12px;
+  display: flex;
+  font-weight: 200;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }
